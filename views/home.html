@@ -1,0 +1,10 @@
+<div ng-controller="mainController as main">	
+	<h1>{{main.message}}</h1>
+	<div ng-controller="guestController as guest">
+		<p>{{guest.message}}</p>
+		<form>
+			<input type="text" ng-model="guest.guestName" placeholder="{{guest.placeHolder}}">
+			<button ng-click="guest.logName()">log</button>
+		</form>
+	</div>
+</div>
