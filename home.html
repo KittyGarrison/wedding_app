@@ -1,23 +1,10 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>The Wedding of Kitty&Marcus</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="./css/styles.css">
-	</head>
-	<body ng-app="wedApp" ng-controller="mainController as main">
-		<h1>{{main.message}}</h1>
-		<div ng-controller="guestController as guest">
-			<p>{{guest.message}}</p>
-			<form>
-				<input type="text" ng-model="guest.guestName" placeholder="{{guest.placeHolder}}">
-				<button ng-click="guest.logName()">log</button>
-			</form>
-		</div>
-		<script src="vendor/angular/angular.js"></script>
-		<script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
-		<script src="app.js"></script>
-		<script src="main/main.controller.js"></script>
-		<script src="guest/guest.controller.js"></script>
-	</body>
-</html>
+<div ng-controller="mainController as main">	
+	<h1>{{main.message}}</h1>
+	<div ng-controller="guestController as guest">
+		<p>{{guest.message}}</p>
+		<form>
+			<input type="text" ng-model="guest.guestName" placeholder="{{guest.placeHolder}}">
+			<button ng-click="guest.logName()">log</button>
+		</form>
+	</div>
+</div>
